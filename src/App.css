@@ -1,0 +1,48 @@
+.container {
+  margin: 100px;
+  height: 500px;
+  width: 500px;
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "bedroom1 bedroom1 livingroom livingroom kitchen"
+    "bedroom1 bedroom1 livingroom livingroom kitchen"
+    "full-bath full-bath livingroom livingroom kitchen"
+    "bedroom2 bedroom2 half-bath bedroom3 bedroom3"
+    "bedroom2 bedroom2 half-bath bedroom3 bedroom3";
+}
+
+#bed-1 { grid-area: bedroom1; background-color:  rgb(43,113,136); }
+
+.livingroom { grid-area: livingroom; background-color: rgb(201,172,130); }
+
+#Full-Bath { grid-area: full-bath; background-color: rgb(114,136,49); }
+
+#bed-2 { grid-area: bedroom2; background-color:  rgb(43,113,136) }
+
+#Half-Bath { grid-area: half-bath; background-color: rgb(114,136,49)}
+
+#bed-3 { grid-area: bedroom3; background-color:  rgb(43,113,136)}
+
+.kitchen {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 3fr 5fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  background-color:rgb(241,167,59);
+  grid-auto-flow: row;
+  grid-template-areas:
+    "sink sink oven oven"
+    ". . . ."
+    ". . . .";
+  grid-area: kitchen;
+}
+
+.sink { grid-area: sink; background-color: rgb(147,86,19)  ;}
+
+.oven { grid-area: oven; background-color: rgb(201,71,22) ; }
+
